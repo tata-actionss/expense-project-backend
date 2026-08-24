@@ -20,7 +20,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     uses: tata-actions/workflows/.github/workflows/dev-nodejs-pipeline.yaml@main
     with:
-      project: expense-project
+      project: expense-projectss
       component: backend
       environment: dev
     secrets: inherit   
