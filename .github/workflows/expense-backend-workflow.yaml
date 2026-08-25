@@ -1,4 +1,4 @@
-name: feature-pipeline-backendss
+name: feature-pipeline-backendsss
 
 on: [push]
 permissions:
