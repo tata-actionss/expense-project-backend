@@ -1,0 +1,26 @@
+name: feature-pipeline-backends
+
+on: [push]
+permissions:
+  contents: read
+  statuses: write
+  security-events: read
+
+jobs:
+  feature-pipeline:
+    if: github.ref != 'refs/heads/main'
+    uses: tata-actionss/workflows-reusable/.github/workflows/feature-nodejs-pipeline.yml@main
+    with:
+      project: expense-project
+      component: backend
+      environment: dev
+    secrets: inherit  
+
+  dev-pipeline:
+    if: github.ref == 'refs/heads/main'
+    uses: tata-actionss/workflows-reusable/.github/workflows/dev-nodejs-pipeline.yml@main
+    with:
+      project: expense-projectss
+      component: backend
+      environment: dev
+    secrets: inherit   
