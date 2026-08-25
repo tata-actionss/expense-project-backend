@@ -9,7 +9,7 @@ permissions:
 jobs:
   feature-pipeline:
     if: github.ref != 'refs/heads/main'
-    uses: tata-actions/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    uses: tata-actionss/workflows/.github/workflows/feature-nodejs-pipeline.yml@main
     with:
       project: expense-project
       component: backend
